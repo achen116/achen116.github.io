@@ -1,0 +1,15 @@
+main {
+	max-width: 500px;
+	margin: auto;
+}
+h1 {
+	margin-bottom: -20px;
+}
+h2 {
+	font-style: italic;
+	border-bottom: double gray;
+	padding-bottom: 5px;
+}
+h4 {
+	text-align: right;
+}
