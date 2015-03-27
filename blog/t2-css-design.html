@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <title>DBC Technical Blog | Issue No. 2</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <h4>3.27.15</h4>
+  <h1>CSS Positioning</h1>
+  <h2>What are the differences betweeen static, absolute, fixed, and relative positioning?</h2>
+
+  <section>
+    <p>
+      CSS allows us to control the positioning of HTML elements, which is extremely important to customizing the layout of our webpages. There are four types of positioning attributes: static, absolute, fixed, and relative.
+      <ol>
+        <li><b>Static</b><br/>
+          If none of the above attributes are specified, the default value (static) will be used, meaning the element will appear on the webpage based on its position in the HTML. It will appear within the normal flow of all elements.
+          <br/><br/>
+          <b>Example:</b>
+          <br/><br/>
+          <img src="../images/example-static.png" alt="Static Example"/>
+        </li>
+        <br/>
+        <li><b>Absolute</b><br/>
+          An element with absolute positioning will move in relation to the first parent element that is not static. If none, it will be positioned in relation to &lt;html&gt; (the entire webpage). In addition, elements with absolute positioning are removed from the flow of your HTML; they do not affect and are not affected by other elements on the page. Imagine a photo that sits behind all other text - the text will appear over the image without breaking. On the other hand, a photo that sits in front of all other text will cover the text directly behind it but the characters will not break to surround the image. In this case, all the other elements will act as if the photo is not even there.
+          <br/><br/>
+          <b>Example:</b>
+          <br/><br/>
+          <img src="../images/example-absolute.png" alt="Static Example"/>
+        </li>
+        <br/>
+        <li><b>Fixed</b><br/>
+          An element with a fixed position will stay in its specified location. So, as you scroll up and down on the webpage, that element will appear glued to one spot on the browser screen. One might assume most headers and navigation bars will have a fixed position so that a user can always have easy access to other pages on the site. For example, Gmail's inbox has a fixed header and left sidebar, which host a search bar, as well as commonly used tools and folders (i.e. reply/delete/compose or inbox/starred/sent).
+          <br/><br/>
+          <b>Example:</b>
+          <br/><br/>
+          <img src="../images/example-fixed.png" alt="Static Example"/>
+        </li>
+        <br/>
+        <li><b>Relative</b><br/>
+          An element with relative positioning will move in relation to itself. You must assign another positioning attribute, such as top/bottom/left/right, to elicit an effect. For example, an element with only <b>position: relative</b> will stay in the same spot. However, defining both <b>position: relative</b> and <b>left: 10px</b> will move the element 10px to the right of its original position.
+          <br/><br/>
+          <b>Example:</b>
+          <br/><br/>
+          <img src="../images/example-relative.png" alt="Static Example"/>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Additional positioning attributes, such as top/bottom/left/right, can and should be used with the above positioning types, aside from static since it's just the default value. These supplemental attributes accept a pixel or percentage amount to specify how far up/down/left/right the element should be moved. Don't forget that the element will move in relation to other elements, the webpage, or even itself based on the position type.
+    </p>
+  </section>
+</main>
