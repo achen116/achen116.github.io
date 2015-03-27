@@ -1,0 +1,171 @@
+/* fonts */
+@font-face {
+	font-family: Pacifico;
+	src: url("../fonts/Pacifico.ttf");
+}
+@font-face {
+	font-family: OpenSans-CondBold;
+	src: url("../fonts/OpenSans-CondBold.ttf");
+}
+@font-face {
+	font-family: OpenSans-CondLight;
+	src: url("../fonts/OpenSans-CondLight.ttf");
+}
+@font-face {
+	font-family: OpenSans-CondItalic;
+	src: url("../fonts/OpenSans-CondItalic.ttf");
+}
+/* header styling */
+header {
+	background-image: url("../images/header-bg.png");
+	background-size: tile;
+	height: 275px;
+	text-align: center;
+}
+h1.name {
+	font-family: Pacifico;
+	font-size: 55px;
+	margin: 0px 0px -15px 0px;
+}
+li {
+	display: inline;
+	font-family: OpenSans-CondLight;
+	font-size: 18px;
+}
+div {
+	background-color: white;
+	height: 275px;
+	width: 550px;
+	margin: auto;
+}
+.content {
+	display: table-cell;
+	vertical-align: middle;
+}
+div.email {
+	background-color: #B93258;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin-right: 50px;
+	margin-left: -30px;
+	display: inline-block;
+}
+div.linkedin {
+	background-color: #CCCCCB;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin-right: 70px;
+	display: inline-block;
+}
+div.github {
+	background-color: #FFCA61;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin-right: 60px;
+	display: inline-block;
+}
+div.twitter {
+	background-color: #AFDBD1;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin-right: 50px;
+	display: inline-block;
+}
+/* link styling */
+a.header {
+	color: black;
+	text-decoration: none;
+	padding: 18px;
+}
+a.header:hover {
+	text-decoration: underline;
+}
+/* nav bar styling */
+.nav-bar {
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	padding: 20px;
+	margin: 0px;
+}
+a.nav-bar:hover {
+	color: #FFCA61;
+	text-decoration: underline;
+}
+/* about me styling */
+table {
+	width: 800px;
+	margin: auto;
+	padding: 75px 0px 75px 0px;
+}
+.about-me {
+	padding-left: 40px;
+	margin: 0px;
+}
+h2 {
+	font-family: OpenSans-CondBold;
+	font-size: 30px;
+	margin: 0px;
+}
+img {
+	border-radius: 65px 0px 65px 0px;
+	border: 5px solid black;
+}
+p {
+	font-family: Arial;
+	font-size: 14px;
+	margin: 0px;
+}
+/* footer styling */
+footer {
+	background-color: #AFDBD1;
+	height: 30px;
+	padding-top: 8px;
+	opacity: 0.55;
+}
+.footer {
+	font-family: OpenSans-CondLight;
+	text-align: center;
+}
+/* blog link styling */
+table.blog {
+	padding: 20px 0px 0px 0px;
+	font-family: OpenSans-CondLight;
+	font-size: 18px;
+	width: 125px; /* adjust width when adding more blog posts, 4 = 600px */
+	margin: auto;
+	table-layout: fixed;
+}
+td.blog-links {
+	border: 1px solid black;
+	text-align: center;
+	height: 125px;
+	width: 100px;
+}
+section.technical {
+	width: 800px;
+	margin: auto;
+	padding: 75px 0px 25px 0px;
+}
+section.cultural {
+	width: 800px;
+	margin: auto;
+	padding: 25px 0px 75px 0px;
+}
+a.blog-links {
+	color: black;
+	text-decoration: none;
+}
+a.blog-links:hover {
+	color: #AFDBD1;
+}
+div.blog-separator {
+	height: 0px;
+	width: 800px;
+	border: 1px dotted black;
+}
