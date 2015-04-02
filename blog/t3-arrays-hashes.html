@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <title>DBC Technical Blog | Issue No. 3</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <h1>Arrays vs. Hashes</h1>
+  <h2><!-- subtitle (optional) --></h2>
+
+  <section>
+    <p>
+      As you may already know, the Ruby language uses variables (a word or name) to hold a single value, like so:
+
+      <br/><br/><code>dinosaur = "Tyrannosaurus Rex"</code><br/><br/>
+
+      However, what if we need to store a list of different types of dinosaurs? We could create one variable for each type of dinosaur but that can take up a lot of space in your code and get tiresome if we need to access all of the dinosaurs together. Thankfully, Ruby has other options for holding multiple values.
+    </p>
+    <h3>
+      Arrays
+    </h3>
+      <p>
+        Arrays hold multiple objects in a single variable; they act like a list. The list of items is enclosed in square brackets ([ ]) and each item in the list is separated by a comma (,). Like variables, the name of the array should begin with a lowercase letter and is set equal to your list items, like so:
+
+        <br/><br/><code>dinosaur_list = ["Tyrannosaurus Rex", "Brachiosaurus", Triceratops", "Velociraptor"]</code><br/><br/>
+
+        Array values can include integers, strings, booleans (True/False), and even arrays! Additionally, arrays don't have to be all integers or all strings; they can include a mixture of these data types, like so:
+
+        <br/><br/><code>dinosaur_mix = ["Tyrannosaurus Rex", 2, ["3", 4, "Velociraptor"]]</code><br/><br/>
+
+        So, what if you want to access just one item in your array? You can access individual values of an array using a numbered index. Programming languages like to start counting at 0. So, the first item in your array will begin with an index 0, like so:
+
+        <br/><br/><code>dinosaur_list[0] #returns Tyrannosaurus Rex
+        <br/>dinosaur_list[1] #returns "Brachiosaurus"
+        <br/>dinosaur_list[2] #returns "Triceratops"
+        <br/>dinosaur_list[3] #returns "Velociraptor"</code><br/><br/>
+
+        Beginning your count at 0 may seem weird at first, but you'll get used to it with some practice! Since array values are accessed using a numbered index, the order of these values will matter when you're trying to call them. However, what if the order of your list doesn't matter?
+      </p>
+    <br/>
+      <h3>
+      Hashes
+    </h3>
+      <p>
+        Hashes are similar to arrays in that they hold multiple values in a single variable. However, these values are a collection of key-value pairs, so the order of them doesn't matter. Below is an example of a hash:
+
+        <br/><br/>
+        <code>
+        dinosaur_hash {
+          <br/>"Tyrannosaurus Rex" => "T-rex",
+          <br/>"Brachiosaurus" => "Long Neck",
+          <br/>"Triceratops" => "Three Horned"
+        <br/>}
+        </code>
+        <br/><br/>
+
+        In the example above, 'Tyrannosaurus Rex' is the key and 'T-rex' is the value of the key. I imagine it like a dictionary - in the dictionary, there is a vocabulary word (the key) paired with a definition (the value); these two things are a unit. In this case, the scientific name of the dinosaur is paired with the common nickname, which is easier to say and type! While you access values of an array using a numbered index, you can access values of a hash through their keys, meaning order doesn't matter.
+
+        <br/><br/><code>dinosaur_hash["Brachiosaurus"] #returns Long Neck</code><br/><br/>
+
+        As you can see, arrays and hashes are important, useful tools in Ruby because they hold any number of values in a single variable. There are numerous methods you can apply to arrays and hashes, which will iterate through each of its values and help us follow the DRY (Don't Repeat Yourself) principle.
+      </p>
+  </section>
+  <h4>Published on April 1, 2015</h4>
+</main>
