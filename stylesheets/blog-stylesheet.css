@@ -5,7 +5,7 @@ main {
 h1 {
 	font-family: Pacifico;
 	font-size: 40px;
-	margin: 0px;
+	margin-bottom: 0px;
 }
 h2 {
 	font-size: 20px;
@@ -13,19 +13,27 @@ h2 {
 	padding: 5px 0px 10px 0px;
 	margin-bottom: 10px;
 }
+h3 {
+	font-family: OpenSans-CondBold;
+}
 h4 {
 	text-align: right;
 	font-family: Arial;
-	font-size: 14px;
-	margin-bottom: 0px;
+	font-size: 12px;
+	padding-top: 5px;
+	border-top: double gray;
 }
-ul {
+ul.blog {
 	padding: 0px 0px 0px 15px;
 }
-li {
+li.blog {
 	font-family: Arial;
 	font-size: 14px;
 	margin: 0px;
 	padding: 0px 0px 5px 0px;
 	display: list-item;
+}
+code {
+	background-color: #CCCCCB;
+	font-size: 13px;
 }
