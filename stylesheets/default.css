@@ -145,7 +145,8 @@ td.blog-links {
 	border: 1px solid black;
 	text-align: center;
 	height: 125px;
-	width: 100px;
+	width: 125px;
+	padding: 0px 5px 0px 5px;
 }
 section.technical {
 	width: 800px;
