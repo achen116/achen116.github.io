@@ -23,6 +23,10 @@ h4 {
 	padding-top: 5px;
 	border-top: double gray;
 }
+h5 {
+	font-family: Arial;
+	font-size: 10px;
+}
 ul.blog {
 	padding: 0px 0px 0px 15px;
 }
@@ -36,5 +40,5 @@ li.blog {
 code {
 	background-color: #CCCCCB;
 	font-size: 13px;
-	padding: 1px;
+	padding: 10px;
 }
