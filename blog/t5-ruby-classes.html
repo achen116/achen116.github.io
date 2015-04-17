@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <title>DBC Technical Blog | Issue No. 5</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <h1>"Class" Is In Session</h1>
+  <h2>A crash course on when, why, and how to use Ruby classes</h2>
+
+  <section>
+    <p>
+      Every object in Ruby is an instance of a class. For example, the string <code>"hello world"</code> is an instance of the <code>String</code> class. We recognize the name <code>String</code> as a class because of it's capitalized "S." Ruby class names begin with a capitalized letter and follow camel case rules for names with mutliple words (i.e. MyClass). However, if you don't know an object's class and want to find out, you can call the <code>#class</code> method on that object, like so: <code>77.class</code> - the output is <code>Fixnum</code>. These examples include built-in Ruby classes, but you can also write your own classes. Let's first take a step back and explain what Ruby classes are in more detail.
+    </p>
+    <br/>
+    <p>
+      A Ruby class houses a collection of behaviors, otherwise known as methods. These behaviors are applied to all objects that are created as instances of that class, which is especially useful when we create multiple objects that we need to behave in similar ways. Take a look at the example of a class below. Don't worry if it looks confusing, we'll go through it step-by-step to figure out what it's doing.
+    </p>
+    <br/>
+    <img src="../images/example-class.png" alt="Class Example"/>
+    <br/><br/>
+    <p>
+      In the example above we are creating a class that will help us check whether or not a certain movie goer is old enough to watch a rated R movie. To do this, we first defined a class by using the <code>class</code> keyword followed by a name of our choice. (Remember, the name begins with a capital letter and follows camel case rules).
+    </p>
+    <br/>
+    <p>
+      Next, we created an initialize method to ensure every time an instance of <code>MovieGoer</code> is created, it has a name and, more importantly, an age passed in as arguments. Creating an instance of class looks a like this:
+    </p>
+      <br/>
+      <img src="../images/example-instance-class.png" alt="Instance of Class Examples"/>
+      <br/><br/>
+    <p>
+      <code>.new</code> is called on <code>MovieGoer</code> to create a new object that is an instance of the <code>MovieGoer</code> class. This new object is assigned to the variable <code>billy</code>. The argument "Billy" is assigned to the instance variable <code>@name</code> and the argument 16 is assigned to the instance variable <code>@age</code>. (Instance variables start with an "@" symbol and allow us to access them in other methods within the same class. If we used a local variable, it would only have local scope and couldn't be accessed again in our <code>old_enough</code> method). These instance variables were assigned as soon as we created the object <code>billy</code>. Any time a new instance of a class is created, the <code>initialize</code> method is always run first.
+    </p>
+    <br/>
+    <p>
+      Finally, we created an instance method <code>old_enough</code>, which checks if the movie goer's age is greater than or equal to 17 and puts an approval/disapproval statement accordingly. An instance method simply refers to a method that is defined within a class. However, instance methods are powerful in that they can be called on any instance of the class in which they're defined. This means, we can create a new instance of the class <code>MovieGoer</code> and call the same method on the object <code>ann</code> as we can on the object <code>billy</code>.
+    </p>
+    <br/>
+      <img src="../images/example-instance-method-class.png" alt="Instance Method Class Examples"/>
+      <br/><br/>
+    <p>
+      Though we only have one method in our <code>MovieGoer</code> class, we could define many more. For example, checking the age of a movie goer to see if they're eligible for PG-13 movies if not rated R movies. Or, we could expand the old_enough method to see if they have a guardian with them, making them eligible to watch the rated R movie. No matter how many methods we define in the class though, they will all be accessible by any object that is an instance of that class. You can even call methods within other methods in the same class so that they work and communicate with each other. This capacity is what makes classes so useful and so powerful.
+    </p>
+    <br/>
+  </section>
+  <h4>Published on April 16, 2015</h4>
+</main>
