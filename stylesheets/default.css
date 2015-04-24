@@ -32,16 +32,14 @@ li {
 	font-family: OpenSans-CondLight;
 	font-size: 18px;
 }
-div {
+div.header {
 	background-color: white;
 	height: 275px;
 	width: 550px;
 	margin: auto;
+	padding-top: 55px;
 }
-.content {
-	display: table-cell;
-	vertical-align: middle;
-}
+
 div.email {
 	background-color: #B93258;
 	height: 15px;
