@@ -167,4 +167,5 @@ div.blog-separator {
 	height: 0px;
 	width: 800px;
 	border: 1px dotted black;
+	margin: auto;
 }
