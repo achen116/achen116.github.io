@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <title>DBC Technical Blog | Issue No. 7</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <h1>Variable Differences</h1>
+  <h2>How to declare variables in JavaScript vs Ruby</h2>
+
+  <section>
+    <p>
+      In both JavaScript and Ruby, a <b>variable</b> is used to save some value (i.e. a number, string, or boolean) in a programmer's code. When a value is assigned to a variable, that value can be called using the variables name. So, instead of typing a super long word out like <code>"supercalifragilisticexpialidocious"</code> multiple times, you can assign that string to a variable name like <code>mary_poppins</code>. Then, whenever you write <code>mary_poppins</code>, the program will know to actually substitute in the string value <code>"supercalifragilisticexpialidocious"</code>, saving your fingers and brain a lot of work!
+    </p>
+    <br/>
+    <p>
+      Now, what is the difference you ask? The difference is in the syntax; compare the two below.
+    </p>
+    <br/>
+    <p><script src="https://gist.github.com/achen116/b8761b5557e814afebc0.js"></script></p>
+    <p><script src="https://gist.github.com/achen116/2bb86269cdd2eb603fa7.js"></script></p>
+    <p>
+      In JavaScript, variable assignment begins with the <code>var</code> keyword, followed by the variable name set equal to the value. The <code>var</code> keyword creates the variable in its current scope. The semi-colon (;) at the end of the line also tells JavaScript that is the end of the statement. In Ruby, the <code>var</code> keyword and the semi-colon are not necessary; it only requires the variable name set equal to the value. Additionally, JavaScript convention prefers variables with two or more words to use camel case, while Ruby convention prefers inserting an underscore between additional words. However, it is still acceptable to use underscores instead of camel case in JavaScript if you prefer. Just be sure the variable name begins with a lower case letter and not a number in both JavaScript and Ruby.
+    </p>
+    <br/>
+    <p>
+      So, do I have to type <code>var</code> when using that variable in other parts of my code? Nope! (<i>That</i> could get annoying). Reassigning variable values and referencing variables in later code is the same in JavaScript and in Ruby.
+    </p>
+    <br/>
+    <p><script src="https://gist.github.com/achen116/c9aa003c56435209e90c.js"></script></p>
+    <p><script src="https://gist.github.com/achen116/85da27c58f2feaa99805.js"></script></p>
+    <p>
+      In both examples, we receive the same output by calling both variables in a similar way. <code>console.log()</code> and <code>puts</code> are just JavaScript's and Ruby's way of printing out things to the console. As you might guess, there are many more differences between JavaScript and Ruby but don't stress out! Just take in each concept one at a time like this one, and it'll be easy-peasy-lemon-squeezy ;)
+    </p>
+  </section>
+  <h4>Published on <!-- today's date --></h4>
+</main>
