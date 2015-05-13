@@ -19,7 +19,7 @@
 header {
 	background-image: url("../images/header-bg.png");
 	background-size: tile;
-	height: 275px;
+	height: 255px;
 	text-align: center;
 }
 h1.name {
@@ -34,10 +34,10 @@ li {
 }
 div.header {
 	background-color: white;
-	height: 275px;
+	height: 255px;
 	width: 550px;
 	margin: auto;
-	padding-top: 55px;
+	padding-top: 50px;
 }
 
 div.email {
@@ -93,7 +93,7 @@ a.header:hover {
 }
 a.nav-bar:hover {
 	color: #FFCA61;
-	text-decoration: underline;
+	text-decoration: none;
 }
 /* about me styling */
 table {
@@ -118,6 +118,14 @@ p {
 	font-family: Arial;
 	font-size: 14px;
 	margin: 0px;
+}
+/* portfolio styling */
+td.portfolio {
+	text-align: center;
+}
+h1.portfolio {
+	font-family: Pacifico;
+	font-size: 30px;
 }
 /* footer styling */
 footer {
