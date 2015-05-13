@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <head>
-  <title>DBC Technical Blog | Issue No. 6</title>
+  <title>Arielle Chen || Technical Blog</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
 </head>
 
-<main>
-  <h1>Blocks, Procs, and Lambdas</h1>
-  <h2><!-- subtitle (optional) --></h2>
+<body>
+  <!-- page header -->
+  <header>
+    <div class="header">
+      <h1 class="name">Arielle Chen</h1>
+       <h3>Technical Blog <div class="email"></div><div class="linkedin"></div> Issue No.6</h3>
+    </div>
 
-  <section>
-    <p>
-      In this post, we're going to tackle the similarities and differences between blocks, procs, and lambdas in Ruby. Their names may seem a little intimidating at first, but once you get to know them they're actually quite friendly! :)
-    </p>
-    <br/>
-    <p>
-      You may have come across blocks before while working with various Ruby methods. If not, they can be spotted pretty easily. A <b>block</b> is the little bit of code that comes between curly brackets <code>{}</code> or between the keywords <code>do..end</code> after a Ruby method name. The block indicates the behavior a method should perform on the object it's called on. Below is example using the method <code>#map</code>.
-    </p>
-    <br/>
-    <p><script src="https://gist.github.com/achen116/2198faba7389200e2cc7.js"></script></p>
-    <br/>
-    <p>
-      In the example above, the block is <code>|drink| drink + ":venti"</code>. It tells <code>#map</code> to iterate through the <code>starbucks_order</code> array and add the string <code>": venti"</code> to each string item (represented by the parameter <code>drink</code>) in the array. Whether we used the <code>{}</code> or <code>do..end</code> syntax, the output was the same. Now, our Starbucks baristas know what size drink we'd like!
-    </p>
-    <br/>
-    <p>
-      So, what if we had a few more Starbucks orders that all wanted to Venti-sized drinks? We could call <code>#map</code> on each of these orders and pass through the same block <code>|drink| drink + ":venti"</code> every time but that would require a lot of repetition. Since blocks are technically not considered Ruby objects, we can't save them to a variable and pass that variable as a block. Instead, we can use <b>procs</b>. A proc is a saved version of a block. The example below demonstrates the use of a proc.
-    </p>
-    <br/>
-    <p><script src="https://gist.github.com/achen116/bc5bfdd9be77504f9555.js"></script></p>
-    <br/>
-    <p>
-      As you can see, we created a new proc using <code>Proc.new</code> and passed in the block behavior we want to reuse in curly braces (<code>do..end</code> is also acceptable). This proc is saved as the variable <code>venti</code>, which can be passed as a parameter to a method name as seen on line 9, 10, and 11; note that the proc is placed between regular parentheses (), not curly braces {}. The <code>&</code> turns the proc into a usable block. Now, we don't have to rewrite <code>|drink| drink + ":venti"</code> multiple times, we can simply write <code>&venti</code>. Pretty neat, right?
-    </p>
-    <br/>
-    <p>
-      <b>Lambdas</b> are very similar to procs. They also save code blocks in variables and their syntax is almost identical - you just exchange <code>Proc.new</code> for <code>lambda</code> - everything else remains the same. You're probably wondering.. what's the catch? Well, the difference between the two concepts is in how they behave inside a calling method. If you use <code>return</code> in a lambda, it will exit its own block and give control back to the calling method. On the other hand, if you use <code>return</code> in a proc, it will exit from its own block and from the entire calling method itself; control is not given back to the calling method.
-    </p>
-    <br/>
-    <p><script src="https://gist.github.com/achen116/0c482c7ad1abe1eafffc.js"></script></p>
-    <br/>
-    <p>
-      The example above illustrates the return output based on whether the calling method <code>#some_(lambda/proc)_method</code> uses a lambda or a proc. In <code>#some_lambda_method</code>, the code returns the final <code>return</code> statement, while in #some_proc_method, the code returns the inner <code>return</code> statement found inside the proc block because procs don't give control back to the calling method. As a result of this behavior from procs, it is recommended to avoid using them so you don't run into confusion or issues with your return statements. Lambdas provide a great alternative and will also help you keep your Ruby code D.R.Y.
-    </p>
-  </section>
-  <h4>Published on April 23, 2015</h4>
-</main>
+  </header>
+  <!-- navigation bar -->
+  <ul class="nav-bar">
+    <li><a href="../index.html" class="nav-bar">HOME</a></li>
+    <li><a href="../portfolio/index.html" class="nav-bar">PORTFOLIO</a></li>
+    <li><a href="index.html" class="nav-bar">BLOG</a></li>
+  </ul>
+  <!-- blog content -->
+  <main>
+    <h1>Blocks, Procs, and Lambdas</h1>
+    <h2><!-- subtitle (optional) --></h2>
+
+    <section>
+      <p>
+        In this post, we're going to tackle the similarities and differences between blocks, procs, and lambdas in Ruby. Their names may seem a little intimidating at first, but once you get to know them they're actually quite friendly! :)
+      </p>
+      <br/>
+      <p>
+        You may have come across blocks before while working with various Ruby methods. If not, they can be spotted pretty easily. A <b>block</b> is the little bit of code that comes between curly brackets <code>{}</code> or between the keywords <code>do..end</code> after a Ruby method name. The block indicates the behavior a method should perform on the object it's called on. Below is example using the method <code>#map</code>.
+      </p>
+      <br/>
+      <p><script src="https://gist.github.com/achen116/2198faba7389200e2cc7.js"></script></p>
+      <br/>
+      <p>
+        In the example above, the block is <code>|drink| drink + ":venti"</code>. It tells <code>#map</code> to iterate through the <code>starbucks_order</code> array and add the string <code>": venti"</code> to each string item (represented by the parameter <code>drink</code>) in the array. Whether we used the <code>{}</code> or <code>do..end</code> syntax, the output was the same. Now, our Starbucks baristas know what size drink we'd like!
+      </p>
+      <br/>
+      <p>
+        So, what if we had a few more Starbucks orders that all wanted to Venti-sized drinks? We could call <code>#map</code> on each of these orders and pass through the same block <code>|drink| drink + ":venti"</code> every time but that would require a lot of repetition. Since blocks are technically not considered Ruby objects, we can't save them to a variable and pass that variable as a block. Instead, we can use <b>procs</b>. A proc is a saved version of a block. The example below demonstrates the use of a proc.
+      </p>
+      <br/>
+      <p><script src="https://gist.github.com/achen116/bc5bfdd9be77504f9555.js"></script></p>
+      <br/>
+      <p>
+        As you can see, we created a new proc using <code>Proc.new</code> and passed in the block behavior we want to reuse in curly braces (<code>do..end</code> is also acceptable). This proc is saved as the variable <code>venti</code>, which can be passed as a parameter to a method name as seen on line 9, 10, and 11; note that the proc is placed between regular parentheses (), not curly braces {}. The <code>&</code> turns the proc into a usable block. Now, we don't have to rewrite <code>|drink| drink + ":venti"</code> multiple times, we can simply write <code>&venti</code>. Pretty neat, right?
+      </p>
+      <br/>
+      <p>
+        <b>Lambdas</b> are very similar to procs. They also save code blocks in variables and their syntax is almost identical - you just exchange <code>Proc.new</code> for <code>lambda</code> - everything else remains the same. You're probably wondering.. what's the catch? Well, the difference between the two concepts is in how they behave inside a calling method. If you use <code>return</code> in a lambda, it will exit its own block and give control back to the calling method. On the other hand, if you use <code>return</code> in a proc, it will exit from its own block and from the entire calling method itself; control is not given back to the calling method.
+      </p>
+      <br/>
+      <p><script src="https://gist.github.com/achen116/0c482c7ad1abe1eafffc.js"></script></p>
+      <br/>
+      <p>
+        The example above illustrates the return output based on whether the calling method <code>#some_(lambda/proc)_method</code> uses a lambda or a proc. In <code>#some_lambda_method</code>, the code returns the final <code>return</code> statement, while in #some_proc_method, the code returns the inner <code>return</code> statement found inside the proc block because procs don't give control back to the calling method. As a result of this behavior from procs, it is recommended to avoid using them so you don't run into confusion or issues with your return statements. Lambdas provide a great alternative and will also help you keep your Ruby code D.R.Y.
+      </p>
+    </section>
+    <h4>Published on April 23, 2015</h4>
+  </main>
+</body>

@@ -1,46 +1,63 @@
 <!DOCTYPE html>
 <head>
-  <title>DBC Technical Blog | Issue No. 8</title>
+  <title>Arielle Chen || Technical Blog</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
 </head>
 
-<main>
-  <h1>Regular Expressions</h1>
-  <h2>An Introduction to Regular Expressions in Ruby</h2>
+<body>
+  <!-- page header -->
+  <header>
+    <div class="header">
+      <h1 class="name">Arielle Chen</h1>
+       <h3>Technical Blog <div class="email"></div><div class="linkedin"></div> Issue No.8</h3>
+    </div>
 
-  <section>
-    <p><b>What is a Regexp?</b></p>
-    <p>
-      A regular expression (regexp) in Ruby is used to match specified character patterns in strings. Regexps are written with a pair of forward slashes (<code>//</code>), and the pattern is placed between the forward slashes. There are a couple ways to determine if a string contains the regexp pattern: the <code>#match</code> method or the pattern-matching (<code>=~</code>) operator. Below is an example of how to write a regexp and how to test if the pattern exists in a string.
-    </p>
-    <br/>
-    <p><script src="https://gist.github.com/achen116/367e22dbbe0f5f9657d2.js"></script></p>
-    <p>
-      There are a few things to note from the example. First of all, you can call <code>#match</code> on the regexp (<code>/hello/</code>) or on the string (<code>'hello world'</code>); the order doesn't matter, and the same applies to the pattern-matching operator (<code>=~</code>). Second of all, the example demonstrates the difference between <code>#match</code> and <code>=~</code>. <code>#match</code> creates a <code>MatchData</code> object when a match is found, while <code>=~</code> returns the index of the first character that is matched in the string. In this example, the first matched character is "h", which can be found at index position 0. If no match is found, <code>nil</code> is returned whether you're using <code>#match</code> or <code>=~</code>. Next, we'll discuss special characters in regexps.
-    </p>
-    <br/>
-    <p><b>Special Characters</b></p>
-    <p>
-      Special characters (i.e. ^ $ ? . / \ [ ] { } ( ) + *) carry their own meaning in regexps. So, these special characters must be escaped using a backslash (\) if you're trying to match the character itself. For example, if you're trying to find a match for a question mark (?) in some string, you would have to write <code>/\?/</code> in your regexps. A few explanations and examples of common regexp special characters can be found in the below. For a full list, visit <a href="http://ruby-doc.org/core-2.2.0/Regexp.html">Ruby Docs: Regexp</a>.
-    </p>
-    <br/>
-    <p><script src="https://gist.github.com/achen116/07baeda223b14ec5d31f.js"></script></p>
-    <p><b>Capturing Substrings</b></p>
-    <p>
-      You can place parentheses around bits of your regexp to signify that you want to "capture" that match. As a result, Ruby will create variables of the substrings saved as global variables; the names of the variables are based on numbers (i.e. $1, $2, and so on). The first pair of parentheses in your regexp corresponds to the first global variable ($1). In most cases, you're probably looking for a match in a string so you can use that match for other purposes. Capturing substrings with parentheses is very useful for allowing you to do something with the found substring. String interpolation is just one simple example:
-    </p>
-    <br/>
-    <p><script src="https://gist.github.com/achen116/0e6b44094c2dcfef2b9e.js"></script></p>
-    <p><b>Regexps & Ruby Methods</b></p>
-    <p>
-      There are various Ruby methods that accept regexps as arguments, expanding the powerful capabilities of regexps. One of the most common methods include <code>#sub</code> and <code>#gsub</code>, which accepts a regexp (or string) to be removed and a new string to be inserted. The difference between the two is that <code>#sub</code> makes a single substitution, stopping after it finds its first match. On the other hand, <code>#gsub</code> makes as many substitutions as there are matches.
-    </p>
-    <br/>
-    <p><script src="https://gist.github.com/achen116/7fb2f3695552395b1a81.js"></script></p>
-    <p><b>More to learn..</b></p>
-    <p>This post covers just the fundamental basics of regular expressions. However, there is a lot of additional information to learn about each topic covered here: special characters, capturing substrings, methods, and many more. Feel free to explore the <a href="http://ruby-doc.org/core-2.2.0/Regexp.html">Ruby Docs: Regexp</a> webpage, "The Well-Grounded Rubyist" by David A. Black, as well as other resources around the web to familiarize yourself with regexps. They can be hard to read and understand at first, but they are extremely powerful and useful once you get a handle on them.</p>
-  </section>
-  <h4>Published on May 7, 2015</h4>
-</main>
+  </header>
+  <!-- navigation bar -->
+  <ul class="nav-bar">
+    <li><a href="../index.html" class="nav-bar">HOME</a></li>
+    <li><a href="../portfolio/index.html" class="nav-bar">PORTFOLIO</a></li>
+    <li><a href="index.html" class="nav-bar">BLOG</a></li>
+  </ul>
+  <!-- blog content -->
+  <main>
+    <h1>Regular Expressions</h1>
+    <h2>An Introduction to Regular Expressions in Ruby</h2>
+
+    <section>
+      <p><b>What is a Regexp?</b></p>
+      <p>
+        A regular expression (regexp) in Ruby is used to match specified character patterns in strings. Regexps are written with a pair of forward slashes (<code>//</code>), and the pattern is placed between the forward slashes. There are a couple ways to determine if a string contains the regexp pattern: the <code>#match</code> method or the pattern-matching (<code>=~</code>) operator. Below is an example of how to write a regexp and how to test if the pattern exists in a string.
+      </p>
+      <br/>
+      <p><script src="https://gist.github.com/achen116/367e22dbbe0f5f9657d2.js"></script></p>
+      <p>
+        There are a few things to note from the example. First of all, you can call <code>#match</code> on the regexp (<code>/hello/</code>) or on the string (<code>'hello world'</code>); the order doesn't matter, and the same applies to the pattern-matching operator (<code>=~</code>). Second of all, the example demonstrates the difference between <code>#match</code> and <code>=~</code>. <code>#match</code> creates a <code>MatchData</code> object when a match is found, while <code>=~</code> returns the index of the first character that is matched in the string. In this example, the first matched character is "h", which can be found at index position 0. If no match is found, <code>nil</code> is returned whether you're using <code>#match</code> or <code>=~</code>. Next, we'll discuss special characters in regexps.
+      </p>
+      <br/>
+      <p><b>Special Characters</b></p>
+      <p>
+        Special characters (i.e. ^ $ ? . / \ [ ] { } ( ) + *) carry their own meaning in regexps. So, these special characters must be escaped using a backslash (\) if you're trying to match the character itself. For example, if you're trying to find a match for a question mark (?) in some string, you would have to write <code>/\?/</code> in your regexps. A few explanations and examples of common regexp special characters can be found in the below. For a full list, visit <a href="http://ruby-doc.org/core-2.2.0/Regexp.html">Ruby Docs: Regexp</a>.
+      </p>
+      <br/>
+      <p><script src="https://gist.github.com/achen116/07baeda223b14ec5d31f.js"></script></p>
+      <p><b>Capturing Substrings</b></p>
+      <p>
+        You can place parentheses around bits of your regexp to signify that you want to "capture" that match. As a result, Ruby will create variables of the substrings saved as global variables; the names of the variables are based on numbers (i.e. $1, $2, and so on). The first pair of parentheses in your regexp corresponds to the first global variable ($1). In most cases, you're probably looking for a match in a string so you can use that match for other purposes. Capturing substrings with parentheses is very useful for allowing you to do something with the found substring. String interpolation is just one simple example:
+      </p>
+      <br/>
+      <p><script src="https://gist.github.com/achen116/0e6b44094c2dcfef2b9e.js"></script></p>
+      <p><b>Regexps & Ruby Methods</b></p>
+      <p>
+        There are various Ruby methods that accept regexps as arguments, expanding the powerful capabilities of regexps. One of the most common methods include <code>#sub</code> and <code>#gsub</code>, which accepts a regexp (or string) to be removed and a new string to be inserted. The difference between the two is that <code>#sub</code> makes a single substitution, stopping after it finds its first match. On the other hand, <code>#gsub</code> makes as many substitutions as there are matches.
+      </p>
+      <br/>
+      <p><script src="https://gist.github.com/achen116/7fb2f3695552395b1a81.js"></script></p>
+      <p><b>More to learn..</b></p>
+      <p>This post covers just the fundamental basics of regular expressions. However, there is a lot of additional information to learn about each topic covered here: special characters, capturing substrings, methods, and many more. Feel free to explore the <a href="http://ruby-doc.org/core-2.2.0/Regexp.html">Ruby Docs: Regexp</a> webpage, "The Well-Grounded Rubyist" by David A. Black, as well as other resources around the web to familiarize yourself with regexps. They can be hard to read and understand at first, but they are extremely powerful and useful once you get a handle on them.</p>
+    </section>
+    <h4>Published on May 7, 2015</h4>
+  </main>
+</body>

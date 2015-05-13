@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <head>
-  <title>DBC Technical Blog | Issue No. 4</title>
+  <title>Arielle Chen || Technical Blog</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
 </head>
 
-<main>
-  <h1>Enumerable#cycle</h1>
-  <h2>Learn about the Ruby Enumerable method: cycle</h2>
+<body>
+  <!-- page header -->
+  <header>
+    <div class="header">
+      <h1 class="name">Arielle Chen</h1>
+       <h3>Technical Blog <div class="email"></div><div class="linkedin"></div> Issue No.4</h3>
+    </div>
 
-  <section>
-    <p>
-      First of all, what does <code>Enumerable#cycle</code> even mean? This syntax is just a Rubyist's (aka Ruby programmer) way of referring to a method: cycle that is defined in the module: Enumerable. The Enumerable module provides a set of methods that allow us to loop, change, search, or sort through collections, such as arrays, in Ruby; this description might give you a hint as to what the cycle method does. The # symbol identifies the method as an instance method. If you're not familiar with instance methods, don't worry about it now. We'll just be focused on what the cycle method can do for your code in this post :)
-    </p>
-    <br/>
-    <p>
-      Let's begin with an example of <code>Enumerable#cycle</code> to better demonstrate this method.
-      <br/><br/>
-      <code>
-        counting_sheep = ["1 sheep", "2 sheep", "3 sheep", "zzz"]
-        <br/>counting_sheep.cycle(3) { |x| puts x }
-      </code>
-        <br/><br/>The example above would output:<br/><br/>
+  </header>
+  <!-- navigation bar -->
+  <ul class="nav-bar">
+    <li><a href="../index.html" class="nav-bar">HOME</a></li>
+    <li><a href="../portfolio/index.html" class="nav-bar">PORTFOLIO</a></li>
+    <li><a href="index.html" class="nav-bar">BLOG</a></li>
+  </ul>
+  <!-- blog content -->
+  <main>
+    <h1>Enumerable#cycle</h1>
+    <h2>Learn about the Ruby Enumerable method: cycle</h2>
+
+    <section>
+      <p>
+        First of all, what does <code>Enumerable#cycle</code> even mean? This syntax is just a Rubyist's (aka Ruby programmer) way of referring to a method: cycle that is defined in the module: Enumerable. The Enumerable module provides a set of methods that allow us to loop, change, search, or sort through collections, such as arrays, in Ruby; this description might give you a hint as to what the cycle method does. The # symbol identifies the method as an instance method. If you're not familiar with instance methods, don't worry about it now. We'll just be focused on what the cycle method can do for your code in this post :)
+      </p>
+      <br/>
+      <p>
+        Let's begin with an example of <code>Enumerable#cycle</code> to better demonstrate this method.
+        <br/><br/>
         <code>
-          1 sheep<br/>
-          2 sheep<br/>
-          3 sheep<br/>
-          zzz<br/>
-          1 sheep<br/>
-          2 sheep<br/>
-          3 sheep<br/>
-          zzz<br/>
-          1 sheep<br/>
-          2 sheep<br/>
-          3 sheep<br/>
-          zzz
+          counting_sheep = ["1 sheep", "2 sheep", "3 sheep", "zzz"]
+          <br/>counting_sheep.cycle(3) { |x| puts x }
         </code>
-    </p>
-    <br/>
-    <p>
-      In this example, our array <code>counting_sheep</code> was repeated back to us three times. How did we do this?
-    </p>
-    <p>
-      <ol class="blog">
-        <li class="blog">First, we called the method cycle on the array <code>counting_sheep</code></li>
-        <li class="blog">Next, we passed in a parameter value of 3, which tells cycle how many times to repeat. (If we did not pass any parameter value to cycle, it would repeat forever and ever..)</li>
-        <li class="blog">Finally, we defined a code block (in curly brackets {}) which tells cycle what to do with our array. The code parameter <code>|x|</code> refers back to the array, so <code>puts x</code> is actually saying <code>puts counting_sheep</code>.</li>
-      </ol>
-    </p>
-    <br/>
-    <p>
-      Based on the example, we can see that <code>Enumerable#cycle</code> repeatedly calls a code block on an object a specified number of times. As the name suggests, this method is most handy when you need to "cycle" through some object (most likely an array) and apply a behavior to it multiple times. It helps programmers adhere to the DRY (Don't Repeat Yourself) rule by preventing the need to print or puts the same line of code "X" amount of times.
-    </p>
-  </section>
-  <h4>Published on April 10, 2015</h4>
-</main>
+          <br/><br/>The example above would output:<br/><br/>
+          <code>
+            1 sheep<br/>
+            2 sheep<br/>
+            3 sheep<br/>
+            zzz<br/>
+            1 sheep<br/>
+            2 sheep<br/>
+            3 sheep<br/>
+            zzz<br/>
+            1 sheep<br/>
+            2 sheep<br/>
+            3 sheep<br/>
+            zzz
+          </code>
+      </p>
+      <br/>
+      <p>
+        In this example, our array <code>counting_sheep</code> was repeated back to us three times. How did we do this?
+      </p>
+      <p>
+        <ol class="blog">
+          <li class="blog">First, we called the method cycle on the array <code>counting_sheep</code></li>
+          <li class="blog">Next, we passed in a parameter value of 3, which tells cycle how many times to repeat. (If we did not pass any parameter value to cycle, it would repeat forever and ever..)</li>
+          <li class="blog">Finally, we defined a code block (in curly brackets {}) which tells cycle what to do with our array. The code parameter <code>|x|</code> refers back to the array, so <code>puts x</code> is actually saying <code>puts counting_sheep</code>.</li>
+        </ol>
+      </p>
+      <br/>
+      <p>
+        Based on the example, we can see that <code>Enumerable#cycle</code> repeatedly calls a code block on an object a specified number of times. As the name suggests, this method is most handy when you need to "cycle" through some object (most likely an array) and apply a behavior to it multiple times. It helps programmers adhere to the DRY (Don't Repeat Yourself) rule by preventing the need to print or puts the same line of code "X" amount of times.
+      </p>
+    </section>
+    <h4>Published on April 10, 2015</h4>
+  </main>
+</body>
